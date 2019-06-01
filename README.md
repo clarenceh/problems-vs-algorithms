@@ -1,2 +1,2 @@
-# show-me-the-data-structures
-Udacity project - Show me the data structures
+# problems-vs-algorithms
+Udacity project - Problems vs Algorithms
