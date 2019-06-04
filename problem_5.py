@@ -5,7 +5,7 @@ class TrieNode:
 
         # A dictionary to store the possible characters in this node
         # Dictionary key: character (e.g. a)
-        # Dictionary value: a tuple (end_of word: boolean, child_node)
+        # Dictionary value: a tuple (end_of_word: boolean, child_node)
         self.char_dict = dict()
 
     def insert(self, char):
