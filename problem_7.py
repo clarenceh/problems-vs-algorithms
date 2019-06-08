@@ -119,8 +119,23 @@ router = Router("root handler", "not found handler") # remove the 'not found han
 router.add_handler("/home/about", "about handler")  # add a route
 
 # some lookups with the expected output
-print(router.lookup("/")) # should print 'root handler'
-print(router.lookup("/home")) # should print 'not found handler' or None if you did not implement one
-print(router.lookup("/home/about")) # should print 'about handler'
-print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
-print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
+
+# Test case 1 - look up root handler with path "/"
+print("Test case 1 - look up root handler with path '/'")
+# should print 'root handler'
+print(router.lookup("/"))
+
+# Test case 2 - not found handler with path '/home'
+print("Test case 2 - not found handler with path '/home'")
+# should print 'not found handler' or None if you did not implement one
+print(router.lookup("/home"))
+
+# Test case 3 - look up about handler with path '/home/about'
+print("Test case 3 - about handler with path '/home/about'")
+# should print 'about handler'
+print(router.lookup("/home/about"))
+
+# Test case 4 - look up about handler with path '/home/about/ which include trailing /'
+print("Test case 4 - bout handler with path '/home/about' which includes trailing /")
+# should print 'about handler' or None if you did not handle trailing slashes
+print(router.lookup("/home/about/"))
