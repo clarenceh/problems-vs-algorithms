@@ -8,6 +8,10 @@ def rotated_array_search(input_list, number):
        int: Index or -1
     """
 
+    # Handle empty array
+    if len(input_list) == 0:
+        return -1
+
     left_index = 0
     right_index = len(input_list) - 1
 
@@ -66,8 +70,22 @@ def test_function(test_case):
         print("Fail")
 
 
-test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
+# Test case 1 - array with non-rotated values
+print("Calling function with non-rotated array: [1, 2, 3, 4], target value = 3")
+# Should print Pass as the index should be 2
+test_function([[1, 2, 3, 4], 3])
+
+# Test case 2 - array with rotated values
+print("Calling function with rotated array: [6, 7, 8, 9, 10, 1, 2, 3, 4], target value = 1")
+# Should print Pass as the index should be 5
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 8])
-test_function([[6, 7, 8, 1, 2, 3, 4], 1])
-test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+
+# Test case 3 - array without the target value
+print("Calling function with array: [6, 7, 8, 9, 10, 1, 2, 3, 4], non-exist target value = 5")
+# Should print Pass as the index should be -1
+test_function([[6, 7, 8, 1, 2, 3, 4], 5])
+
+# Test case 4 - empty array
+print("Calling function with empty array: [], target value = 5")
+# Should print Pass as the index should be -1
+test_function([[], 5])
