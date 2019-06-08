@@ -41,7 +41,7 @@ print(f"Test case 2 - empty array")
 # Should print "Pass" as the result should be (None, None)
 print ("Pass" if ((None, None) == get_min_max([])) else "Fail")
 
-# Test case 2: array with single item
+# Test case 3: array with single item
 print(f"Test case 3 - array with single item")
 
 # Should print "Pass" as the result should be (None, None)
