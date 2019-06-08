@@ -37,6 +37,10 @@ def rearrange_digits(input_list):
        (int),(int): Two maximum sums
     """
 
+    # Handle empty input list
+    if len(input_list) == 0:
+        return []
+
     # Step 1 - perform heap sort on the input list
     heapsort(input_list)
 
@@ -79,8 +83,18 @@ def test_function(test_case):
         print("Fail")
 
 
+# Test case 1 - un-sorted array as input
+print("Calling function with un-sorted array: [4, 6, 2, 5, 9, 8]")
 test_case_1 = [[4, 6, 2, 5, 9, 8], [964, 852]]
+# Should print pass as the output should be [964, 852]
 test_function(test_case_1)
 
+# Test case 2 - sorted array as input
 test_case_2 = [[1, 2, 3, 4, 5], [542, 31]]
+# Should print pass as the output should be [542, 31]
 test_function(test_case_2)
+
+# Test case 3 - empty array as input
+test_case_3 = [[], []]
+# Should print pass as the output should be []
+test_function(test_case_3)
