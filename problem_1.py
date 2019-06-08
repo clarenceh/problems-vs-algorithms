@@ -36,8 +36,17 @@ def sqrt(number):
     return left_value
 
 
+# Test case 1 - normal case
+print("Calling function with value 9")
+# Should print pass as the square root is exactly 3
 print ("Pass" if  (3 == sqrt(9)) else "Fail")
+
+# Test case 2 - zero value
+print("Calling function with value 0")
+# Should print pass as the square root is 0
 print ("Pass" if  (0 == sqrt(0)) else "Fail")
-print ("Pass" if  (4 == sqrt(16)) else "Fail")
-print ("Pass" if  (1 == sqrt(1)) else "Fail")
+
+# Test case 3 - floor value
+print("Calling function with value 27")
+# Should print pass as the square root's floor value is 5
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
