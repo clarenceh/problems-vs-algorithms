@@ -8,6 +8,10 @@ def rotated_array_search(input_list, number):
        int: Index or -1
     """
 
+    # Handle non-list input
+    if not isinstance(input_list, list):
+        return -1
+
     # Handle empty array
     if len(input_list) == 0:
         return -1
@@ -87,5 +91,10 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 5])
 
 # Test case 4 - empty array
 print("Calling function with empty array: [], target value = 5")
+# Should print Pass as the index should be -1
+test_function([[], 5])
+
+# Test case 5 - non-list inut
+print("Calling function with non-list input: 10, target value = 5")
 # Should print Pass as the index should be -1
 test_function([[], 5])
