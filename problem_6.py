@@ -6,6 +6,10 @@ def get_min_max(ints):
        ints(list): list of integers containing one or more integers
     """
 
+    # Handle non-list input
+    if not isinstance(ints, list):
+        return None, None
+
     # Define variables for min and max value and initialize to None
     min_value = None
     max_value = None
@@ -46,3 +50,9 @@ print(f"Test case 3 - array with single item")
 
 # Should print "Pass" as the result should be (None, None)
 print ("Pass" if ((1, 1) == get_min_max([1])) else "Fail")
+
+# Test case 4: non array input
+print(f"Test case 4 - non array input")
+
+# Should print "Pass" as the result should be (None, None)
+print ("Pass" if ((None, None) == get_min_max(10)) else "Fail")
