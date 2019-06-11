@@ -30,8 +30,8 @@ class TrieNode:
                 output_str_list.append(output_str)
 
             for char in node.char_dict:
-                output_str += char
-                find_suffix(node.char_dict[char], output_str)
+                temp_output_str = output_str + char
+                find_suffix(node.char_dict[char], temp_output_str)
 
         find_suffix(self, "")
 
@@ -78,9 +78,9 @@ class Trie:
         output_str = [""]
 
         def print_node(node, output_str):
-            output_str[0] += f"End of word: {node.end_of_word}\n"
+            output_str[0] += f"\nEnd of word: {node.end_of_word}\n"
             for char in node.char_dict:
-                output_str[0] += f"char: {char}\n"
+                output_str[0] += f"char: {char}"
                 print_node(node.char_dict[char], output_str)
 
         print_node(self.root, output_str)
@@ -97,8 +97,5 @@ wordList = [
 for word in wordList:
     MyTrie.insert(word)
 
-print(MyTrie)
-
-node = MyTrie.find('a')
+node = MyTrie.find('f')
 print(node.suffixes())
-

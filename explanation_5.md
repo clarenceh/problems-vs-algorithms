@@ -16,7 +16,7 @@ For the Trie class, the "insert" and "find" operations were implemented as follo
 
 For finding suffixes, the following logic was implemented:
 1. Firstly, locate the TriNode base the character string that we want to search for suffixes.
-1. Traverse the TrieNode tree under the TriNode and whenever we hit the end of word, we add the result suffix in the list of suffixes
+1. Traverse the TrieNode tree under the TrieNode recursively and whenever we hit the end of word, we add the result suffix in the list of suffixes
 1. Finally, we return the list of all possible suffixes.
 
 ## Run time complexity
