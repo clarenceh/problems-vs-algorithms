@@ -17,6 +17,6 @@ The run time complexity is the same as the Heap Sort algorithm, which is of O(nl
 Firstly, Heap Sort use in-place value comparison and swapping. Heap Sort is of constant space complexity.
 
 Afterwards, the construction of 2 values take a portion of the space of the input array size. 
-Afterwards, the construction of the 2 values was done by a single traversal of the array. Which also take constant space complexity.
+Afterwards, the construction of the 2 values was done by a single traversal of the array, which grows linearly as the size of input.
 
-As a result, the space complexity is of O(1).
+As a result, the space complexity is of O(n).
