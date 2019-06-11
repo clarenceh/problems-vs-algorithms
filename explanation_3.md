@@ -19,4 +19,4 @@ Firstly, Heap Sort use in-place value comparison and swapping. Heap Sort is of c
 Afterwards, the construction of 2 values take a portion of the space of the input array size. 
 Afterwards, the construction of the 2 values was done by a single traversal of the array, which grows linearly as the size of input.
 
-As a result, the space complexity is of O(n).
+As a result, the overall space complexity is of O(n).
