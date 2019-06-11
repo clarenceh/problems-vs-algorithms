@@ -57,3 +57,9 @@ test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
 print("Calling function with sorted array: [0]")
 # Should print Pass as the result array should be the same array
 test_function([0])
+
+# Test case 4 - array with empty array
+# Should print []
+print("Calling function with empty array: []")
+# Should print Pass as the result array should also be an empty array
+test_function([])
